@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,minimal-ui,initial-scale=1,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="format-detection" content="telephone=no" />
+	<title>谁看过我</title>
+	<!-- 分享平台获取信息 -->
+	<meta itemprop="name" content="半熟人婚恋-最靠谱的婚礼平台">
+	<meta name="description" itemprop="description" content="半熟人婚恋-最靠谱的婚礼平台">
+    <meta itemprop="image" content="logo.jpg">
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+    <div class="top">
+        <div class="top_content">
+            <h2 class="title">
+                <a class="goback fl" href="javascript:history.back(-1)">返回</a>
+                <span>谁看过我</span>
+            </h2>
+        </div>
+    </div>
+   <div class="wrap">
+       <ul class="list_wrap">
+           <li>
+               <h3 class="time_see_wrap">
+                   <div class="circle_ico">
+                       <div></div>
+                   </div>
+                   <span class="time_see">今天</span>
+               </h3>
+               <div class="user_ico_wrap">
+                    <div class="user_ico_list">
+                        <img src="images/user_img_01.png" alt="" />
+                        <img src="images/user_img_02.png" alt="" />
+                        <img src="images/user_img_03.png" alt="" />
+                        <img src="images/user_img_04.png" alt="" />
+                        <img src="images/user_img_05.png" alt="" />
+                    </div>
+               </div>
+           </li>
+           <li>
+               <h3 class="time_see_wrap">
+                   <div class="circle_ico">
+                       <div></div>
+                   </div>
+                   <span class="time_see">2016.09.07</span>
+               </h3>
+               <div class="user_ico_wrap">
+                   <div class="user_ico_list">
+                       <img src="images/user_img_01.png" alt="" />
+                       <img src="images/user_img_02.png" alt="" />
+                   </div>
+               </div>
+           </li>
+           <li>
+               <h3 class="time_see_wrap">
+                   <div class="circle_ico">
+                       <div></div>
+                   </div>
+                   <span class="time_see">2016.09.05</span>
+               </h3>
+               <div class="user_ico_wrap">
+                   <div class="user_ico_list">
+                       <img src="images/user_img_01.png" alt="" />
+                       <img src="images/user_img_02.png" alt="" />
+                   </div>
+               </div>
+           </li>
+           <li>
+               <h3 class="time_see_wrap">
+                   <div class="circle_ico">
+                       <div></div>
+                   </div>
+                   <span class="time_see">2016.09.04</span>
+               </h3>
+               <div class="user_ico_wrap">
+                   <div class="user_ico_list">
+                     <img src="images/user_img_02.png" alt="" />
+                   </div>
+               </div>
+           </li>
+       </ul>
+   </div>
+<script src="js/autosize.js"></script>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+    $(function(){
+        $('.list_wrap .user_ico_list').each(function(index,element){
+            var lenght = $('.user_ico_list').eq(index).find('img').length;
+            var width = lenght*1.8
+           $('.user_ico_list').eq(index).css('width',width+'rem')
+        });
+    });
+</script>
+</body>
+</html>

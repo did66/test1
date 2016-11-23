@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,minimal-ui,initial-scale=1,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="format-detection" content="telephone=no" />
+	<title>详情</title>
+	<!-- 分享平台获取信息 -->
+	<meta itemprop="name" content="半熟人婚恋-最靠谱的婚礼平台">
+	<meta name="description" itemprop="description" content="半熟人婚恋-最靠谱的婚礼平台">
+    <meta itemprop="image" content="logo.jpg">
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/swiper.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+</head>
+<body>
+    <div class="top">
+        <div class="top_content">
+        <h2 class="title">
+            <a class="goback fl" href="javascript:history.back(-1)">返回</a>
+            <span>详情</span>
+        </h2>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="dyna_detail_wrap">
+            <div class="dyna_detail_msg">
+                <div class="dyna_detail_ico fl">
+                    <img src="images/keke.jpg" alt="" />
+                </div>
+                <div class="dyna_detail_content fl">
+                    <p class="dyna_detail_name">胡歌歌</p>
+                    <p class="dyna_detail_text">大王叫我去巡山大王</p>
+                    <ul class="dyna_detail_img">
+                        <li>
+                            <img src="images/1.jpg" alt="" />
+                        </li>
+                        <li>
+                            <img src="images/2.jpg" alt="" />
+                        </li>
+                        <li>
+                            <img src="images/3.jpg" alt="" />
+                        </li>
+                        <li>
+                            <img src="images/4.jpg" alt="" />
+                        </li>
+                        <li>
+                            <img src="images/5.jpg" alt="" />
+                        </li>
+                    </ul>
+                    <div class="dyna_detail_date">
+                        <span>2016年9月30号 13:00</span>
+                        <em>删除</em>
+                        <i class="zan_ico">
+                            <img class="no_zan" src="images/zan.png" alt="" />
+                            <img src="images/zan_hover.png" alt="" />
+                        </i>
+                        <i id="goComment" class="ico_bg zan_msg"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="comment_wrap">
+                <div class="tips_up"></div>
+                <div class="zan_wrap">
+                    <i class="zan_ico fl mt_6">
+                        <img src="images/zan.png" alt="" />
+                    </i>
+                    <ul class="zan_user_ico fl">
+                        <li>
+                            <img src="images/user_img_03.png" alt="" />
+                        </li>
+                        <li>
+                            <img src="images/user_img_03.png" alt="" />
+                        </li>
+                    </ul>
+                </div>
+                <div class="comment_contents_wrap">
+                   <ul class="comment_contents">
+                       <li class="clearfix">
+                           <div class="dyna_detail_ico fl">
+                               <img src="images/keke.jpg" alt="" />
+                           </div>
+                           <div class="dyna_detail_content fl">
+                               <p class="dyna_detail_name">胡歌歌</p>
+                               <p class="dyna_detail_text">大王叫我去巡山大王</p>
+                          </div>
+                           <div class="comment_date">9月3日<em>12:00</em></div>
+                           <i class="ico_bg zan_msg reply"></i>
+                       </li>
+                       <li class="clearfix">
+                           <div class="dyna_detail_ico fl">
+                               <img src="images/keke.jpg" alt="" />
+                           </div>
+                           <div class="dyna_detail_content fl">
+                               <p class="dyna_detail_name">胡歌歌</p>
+                               <p class="dyna_detail_text">大王叫我去巡山大王</p>
+                           </div>
+                           <div class="comment_date">9月3日<em>12:00</em></div>
+
+                       </li>
+                   </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="send_comment">
+        <input class="sent_content" type="text" placeholder="评论" />
+        <span class="go_send">发送</span>
+    </div>
+    <div class="mask"></div>
+    <div class="wrap_big">
+       <div class="swiper-container_big">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="images/1.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/2.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/3.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/4.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/5.jpg" alt="" />
+                </div>
+             </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+<script src="js/autosize.js"></script>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/swiper.js"></script>
+<script>
+//    点赞操作
+         var zanflag = true;
+         var $nozan = $('.no_zan');
+         var $zanUser = $('.zan_user_ico');
+         var $sentContent = $('.sent_content');
+         $('.zan_ico').click(function(){
+             if(zanflag){
+                 $nozan.hide();
+                 zanflag = false;
+                 $zanUser.append('<li class="username"> <img src="images/keke.jpg" alt="" /></li>');//图片路径改为用户头像,username为用户唯一标识(从数据库中取出)，方便下面删除该添加项
+             }
+             else{
+                 $nozan.show();
+                 zanflag = true;
+                 $zanUser.find('li[class=username]').remove();
+             }
+         });
+//点击评论
+        $('#goComment').click(function(){
+            $sentContent.focus();
+        });
+//图片预览
+        $('.dyna_detail_img li').each(function(index){
+            $(this).click(function(){
+                $('.top').hide();
+                $('.mask').show();
+                var thisIndex = index;
+                $('.wrap_big').show();
+                $('html,body').css('overflow','hidden');
+                 swiper = new Swiper('.wrap_big .swiper-container_big', {
+//                     zoom:true,
+                    initialSlide:thisIndex,
+                    paginationClickable: true,
+                    pagination: '.swiper-pagination',
+                    paginationType: 'fraction',
+                    onDestroy: function(){
+                        swiper.slideTo(0)
+                    }
+                });
+            });
+        });
+        $('.mask').click(function () {
+            $('.top').show();
+            $('.mask,.wrap_big').hide();
+            swiper.destroy(false)
+        });
+        $('.wrap_big').each(function (index) {
+            $(this).click(function () {
+                swiper.destroy(false)
+                $('.top').show();
+                $('html,body').css('overflow', 'auto');
+                $(this).hide();
+                $('.mask').hide();
+
+            });
+        });
+
+</script>
+</body>
+</html>

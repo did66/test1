@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,minimal-ui,initial-scale=1,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="format-detection" content="telephone=no" />
+	<title>可可</title>
+	<!-- 分享平台获取信息 -->
+	<meta itemprop="name" content="半熟人婚恋-最靠谱的婚礼平台">
+	<meta name="description" itemprop="description" content="半熟人婚恋-最靠谱的婚礼平台">
+    <meta itemprop="image" content="logo.jpg">
+    <link href="css/photoswipe.css" type="text/css" rel="stylesheet" />
+    <link href="css/swiper.min.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/pullToRefresh.css" />
+    <style>
+        .dialog{ width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 999998; position: fixed; left: 0; top: 0; display: none;}
+        .load_wrap{ position: absolute; width: 10%; top: 50%; left: 50%; transform: translate(-50%,-50%); -webkit-transform: translate(-50%,-50%); z-index: 999999; text-align: center;}
+        .dynamic_user_ico{ overflow: hidden;}
+
+        .loading-warp{ display: table; width: 100%; margin-top: -61px;}
+        .loading-warp .box{ width: 100%; padding: 10px 0; display: table-cell; text-align: center; vertical-align: middle; }
+        .loading-warp .box img{ display: block; width: 20px; height: 20px; margin: 0 auto; }
+        .loading-warp .box .text{ display: block; text-align: center; font-size: 12px; opacity: 0.7; margin-top: 5px; }
+        .laoding_tips{ position: absolute; bottom: 5px; width: 100%; text-align: center;}
+    </style>
+</head>
+<body>
+    <div class="top">
+        <div class="top_content">
+            <h2 class="title">
+                <a class="goback fl" href="javascript:history.back(-1)">返回</a>
+                <span class="title_dynamic">韩可可</span>
+             </h2>
+        </div>
+    </div>
+    <div class="wrap" id="container">
+        <div class="loading-warp">
+            <div class="box">
+                <div>
+                    <img src="images/load.gif" />
+                    <span class="text">刷新完成</span>
+                </div>
+            </div>
+        </div>
+        <div class="dynamic_wrap">
+            <div class="dynamic_bg">
+                <img src="images/big_ico.jpg" alt="" />
+                <div class="dynamic_user_msg">
+                    <p>韩可可</p>
+                    <div class="dynamic_user_ico">
+                        <img src="images/keke.jpg" alt="" />
+                    </div>
+                </div>
+            </div>
+           <div>
+               <ul class="dynamic_list">
+                   <li>
+                       <div class="dynamic_content">
+                           <div class="states_msg_wrap">
+                               <div class="states_msg_img">
+                                   <img src="images/states_img_01.jpg" alt="" />
+
+                               </div>
+                               <div class="img_total">共<em>1</em>张</div>
+                               <div class="states_msg">又能把你怎样</div>
+                           </div>
+                       </div>
+                       <div class="dynamic_date">
+                           <span class="dynamic_date_text">昨天</span>
+                       </div>
+                   </li>
+
+                   <li>
+                       <div class="dynamic_content">
+                           <div class="states_msg dynamic_noImg_bg">童年的裸奔是那样的豪迈、以致于我天真就是两个人光着屁股结婚。</div>
+                       </div>
+                       <div class="dynamic_date">
+                           <span class="dynamic_date_text">09<em>8月</em></span>
+                       </div>
+                   </li>
+                   <li>
+                       <div class="dynamic_content">
+                           <div class="states_msg_wrap">
+                               <div class="states_msg_img">
+                                   <img src="images/test1.jpg" alt="" />
+                                   <img src="images/big_ico.jpg" alt="" />
+                                   <img src="images/big_img.jpg" alt="" />
+                                   <img src="images/big_img.jpg" alt="" />
+                                   <img src="images/states_img_03.jpg" alt="" />
+                                   <img src="images/states_img_03.jpg" alt="" />
+                               </div>
+                               <div class="img_total">共<em>6</em>张</div>
+                               <div class="states_msg">
+                                   静心，静语。轻轻闭上眼睛，用耳去捕捉交织在身旁的声波，用心去细细勾勒身边的世界，这就是倾听的感觉。倾听——静心的乐曲
+                               </div>
+                           </div>
+                       </div>
+                       <div class="dynamic_date">
+                           <span class="dynamic_date_text">06<em>8月</em></span>
+                       </div>
+                   </li>
+               </ul>
+           </div>
+        </div>
+
+    </div>
+    <!--增加loading层开始-->
+    <!--<div class="dialog">-->
+        <!--<div class="load_wrap">-->
+                <!--<img src="images/load.gif" alt="" />-->
+          <!--</div>-->
+    <!--</div>-->
+    <!--增加loading层结束-->
+    <div class="laoding_tips">加载中....</div>
+<script src="js/autosize.js"></script>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/p-pull-refresh.js"></script>
+
+<script>
+
+
+</script>
+<!--下拉刷新-->
+    <script type="text/javascript">
+        //根据图片个数改变图片宽度
+        $(function(){
+            $('.states_msg_wrap .states_msg_img').each(function(index,element){
+                var $img  = $('.states_msg_img').eq(index).find('img')
+                var lenght = $img.length;
+                if(lenght==1){
+                    $img.css('width','87%');
+                }
+            });
+        });
+//        $('.loading-warp').animate({'margin-top':'-61px'}, 500);
+        var $statu = $('.loading-warp .text');
+
+        var pullRefresh = $('#container').pPullRefresh({
+            $el: $('#container'),
+            $loadingEl: $('.loading-warp'),
+            sendData: null,
+            url: 'https://www.baidu.com/',
+            callbacks: {
+                pullStart: function(){
+                    $statu.text('下拉刷新');
+                },
+                start: function(){
+                    $statu.text('松开更新');
+                },
+                runload: function () {
+                    $statu.text('数据刷新中....');
+                },
+                success: function(response){
+                    $statu.text('数据刷新成功！');
+                },
+                end: function(){
+                    $statu.text('刷新结束');
+                },
+                error: function(){
+                    $statu.text('找不到请求地址,数据刷新失败');
+                }
+            }
+        });
+
+    </script>
+
+</body>
+</html>

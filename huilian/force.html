@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimal-ui,initial-scale=1,user-scalable=no">
+    <title>force</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+	<script src="js/echarts.js"></script>
+
+    <style>
+        body,html{ height: 100%; background: #f2f2f2;}
+    </style>
+</head>
+<body>
+    <div class="top">
+        <div class="top_content">
+            <h2 class="title">
+                <a class="goback fl" href="javascript:history.back(-1)">返回</a>
+                <span>关系网络</span>
+            </h2>
+        </div>
+    </div>
+    <div class="loadContent" id = "force" style="width:100%; height:100%;" ></div>
+    <div class="foot_tips">
+        <div class="btn_wrap">
+            <a class="to_well" href="javascript:;">
+                <i class="ico_bg my_ico"></i>
+                <span>个人中心</span>
+            </a>
+            <a class="to_msg" href="javascript:;">
+                <i class="ico_bg email_ico"></i>
+                <span>发送消息</span>
+            </a>
+        </div>
+
+    </div>
+
+<script type="text/javascript">
+ 
+    var  option = {
+   
+    tooltip : {
+        trigger: 'item',
+        formatter: '{a} : {b}',
+		show:false
+    },
+   
+    isShowScrollBar:false,
+    series: [
+        {   draggable:true,
+            large:true,
+            type:'force',
+            categories : [
+                {
+                    name: '本人',
+                    itemStyle: {
+                       normal: {
+                            color : '#f04848',
+                           borderColor:'#000000'
+                        }
+                    }
+                },
+                {
+                    name: '间接人',
+                    itemStyle: {
+                        normal: {
+                            color : '#a9e3d4'
+                        }
+                    }
+                },
+                {
+                    name:'目标人',
+                    itemStyle: {
+                        normal: {
+                            color: '#f04848',
+                            borderColor: '#000000'
+
+                        }
+                    }
+                }
+            ],
+            itemStyle: {
+                normal: {
+                    label: {
+                        show: true,
+                        textStyle: {
+                            color: '#333333'
+                        }
+                    },
+                    linkStyle: {
+                        type: 'curve'
+                    },
+                    nodeStyle : {
+                        brushType : 'both',
+                        strokeColor : 'rgba(255,255,255,1)',
+                        lineWidth :2
+
+                    }
+                },emphasis:{
+                    linkStyle : { strokeColor : '#5182AB'}
+                }
+            },
+            minRadius : 20,
+            maxRadius : 22,
+            density : 0.8,
+            attractiveness: 0.8,
+            nodes:[
+                {category:0, name: '李云鹏',value : 9,shapeType:'rectangle',
+                itemStyle:{
+                    normal:{
+                       
+                    }
+                }
+            },
+                {category:1, name: '可可',value : 5},
+                {category:1, name: '杰',value : 5},
+                {category:1, name: '杰1',value : 5},
+                {category:1, name: '可可1',value : 5},
+                {category:1, name: '李小飞',value : 5},
+                {category:1, name: '王杰',value : 5},
+                {category:1, name: '李云鹏',value : 5},
+                {category:1, name: '可可2',value : 5},
+                {category:2, name: '王杰2',value : 9},
+
+            ],
+            links : [
+               
+                {source : 0, target : 1, weight : 2},
+                {source : 1, target : 2, weight : 2},
+                {source : 2, target : 3, weight :2},
+                {source : 3, target : 4, weight : 2},
+                {source : 4, target : 5, weight : 2},
+                {source : 5, target : 6, weight : 2},
+                {source : 6, target : 7, weight : 2},
+                {source : 7, target : 8, weight : 2},
+                {source : 8, target : 9, weight : 2},
+                {source : 9, target : 10, weight : 2}
+//                {source : 5, target : 7, weight : 2},
+//                {source : 6, target : 8, weight : 2},
+//                {source : 7, target : 9, weight : 2},
+//                {source : 8, target : 9, weight : 2}
+                
+
+            ]
+        }
+    ]
+};
+    var forceArray = option.series[0].nodes;
+     //遍历数组将name值存入数组itemlist
+    var itemlist = forceArray.map(function(forceArray){
+        return forceArray.name;
+    });
+     //对数组排序
+    var sortitem = itemlist.sort();
+    console.log(sortitem)
+    var sameitem = {};
+    //把相同name值存入对象sameitem实现数组去除重复
+    for(var i=0;i<sortitem.length;i++){
+        if(sortitem[i]==sortitem[i+1]){
+            sameitem[sortitem[i]] = sortitem[i];
+        }
+    }
+    console.log(sameitem)
+    var myarray = [];
+    var listarray =[];
+    for(j in sameitem){
+         myarray.push(sameitem[j])
+    }
+    console.log(myarray)
+    //动态定义变量
+    var itemlength = myarray.length;
+    for(var i =0; i<itemlength;i++){
+         listarray[i] = 0;
+    }
+    //重命名相同name值
+ for(var i=0;i<forceArray.length;i++){
+        for(var j=0;j<myarray.length;j++){
+            if(forceArray[i].name==myarray[j]){
+                listarray[j] = listarray[j] + 1;
+                forceArray[i].name = forceArray[i].name + listarray[j];
+            }
+        }
+    }
+   var myChart = echarts.init(document.getElementById('force'));
+        myChart.setOption(option);
+</script>
+<script src="js/autosize.js"></script>
+<script src="js/jquery-1.8.3.min.js"></script>
+</body>
+</html>

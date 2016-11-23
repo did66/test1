@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,minimal-ui,initial-scale=1,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="format-detection" content="telephone=no" />
+	<title>活动详情</title>
+	<!-- 分享平台获取信息 -->
+	<meta itemprop="name" content="半熟人婚恋-最靠谱的婚礼平台">
+	<meta name="description" itemprop="description" content="半熟人婚恋-最靠谱的婚礼平台">
+    <meta itemprop="image" content="logo.jpg">
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+</head>
+<body>
+    <div class="top">
+        <div class="top_content">
+            <h2 class="title">
+                <a class="goback fl" href="javascript:history.back(-1)">返回</a>
+                <span>活动详情</span>
+            </h2>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="act_banner">
+            <img src="images/act_top.jpg" alt="" />
+        </div>
+        <div class="act_msg_wrap">
+            <h3 class="act_title">轰趴交友派对</h3>
+            <ul class="act_msg">
+                <li>
+                    <span class="fl act_tag">时间：</span>
+                    <div class="act_mesion">
+                        <span class="act_time">2016.01.05<br />12:30</span>
+                        <em class="time_link">至</em>
+                        <span class="act_time">2016.01.15<br />12:30</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="fl act_tag">地点：</span>
+                    <div class="act_mesion">
+                        <span>上海浦东祖冲之路1000号（长泰广场）</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="fl act_tag">人数：</span>
+                    <div class="act_mesion">
+                        <span>30</span>
+                    </div>
+                </li>
+                <li class="cost_list">
+                    <span class="fl act_tag">费用：</span>
+                    <div class="act_mesion">
+                        <span>120元/人</span>
+                        <span class="act_mesion_tips">活动开始前24小时取消报名可联系XXX全额退款，缺席不退！谢绝空降！</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="fl act_tag">内容：</span>
+                    <div class="act_mesion">
+                        人生旅程里，我们茕茕孑立。
+                        风霜雪雨般的利剑，将我们伤的千疮百孔。
+                        我们渴望遇见一段友情，给予彼此星星之火般的安慰和温暖。
+                        若是你遇见了友情，便是遇见了幸福，一定要珍惜。
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="foot_tips">
+            <div class="btn_wrap">
+                <div class="to_well sign_btn">
+                    <i class="ico_bg act_persion_ico"></i>
+                    <span><b class="sign_text">我要报名</b><em class="pad_l_4  sign_num">99</em></span>
+                </div>
+                <div class="to_msg collection_btn">
+                    <i class="ico_bg act_sc_ico"></i>
+                    <span><b class="collection_text">收藏</b><em class="pad_l_4 collection_num">18</em></span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+<script src="js/autosize.js"></script>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+
+
+        var $sign_num = $('.sign_num');
+        var $signBtn = $('.sign_btn');
+        var $signText = $('.sign_text');
+
+        var $colloction =  $('.collection_num');
+        var $collIco = $('.act_sc_ico');
+        var $collBtn = $('.collection_btn');
+        var $collText = $('.collection_text');
+        var signflag = true;
+        var collflag = true;
+        var localStorage = localStorage||window.localStorage;
+//        报名点击事件
+        $signBtn.click(function(){
+            if(signflag){
+                addsign()
+            }
+            else{
+                subsign()
+            }
+        });
+        var localsignNum = localStorage.getItem('sign_Num');
+        if( localsignNum){
+            $sign_num.text(localsignNum);
+            $signText.text('取消报名');
+            signflag = false;
+        }
+//        收藏点击事件
+        $collBtn.click(function(){
+
+           if(collflag){
+               addcollNum()
+           }
+            else{
+               subcollNum()
+           }
+        });
+        var localcollNum = localStorage.getItem('collection_num');
+        if(localcollNum){
+            $colloction.text(localcollNum);
+            $collText.text('已收藏');
+            $collIco.addClass('act_sc_ico_check');
+            collflag = false;
+        }
+//        点击报名
+    var addsign = function(){
+        var signNum = parseInt($('.sign_num').text());
+        signNum = signNum + 1;
+        $signText.text('取消报名');
+        $sign_num.text(signNum)
+        localStorage.setItem('sign_Num',signNum);
+        signflag = false;
+    }
+//        取消报名
+        var subsign = function(){
+            var signNum = parseInt($('.sign_num').text());
+            signNum = signNum - 1;
+            $signText.text('我要报名');
+            $sign_num.text(signNum)
+            localStorage.removeItem('sign_Num');
+            signflag = true;
+        }
+//    点击收藏
+    var addcollNum = function(){
+        var collectionNum = parseInt($('.collection_num').text());
+        collectionNum = collectionNum + 1;
+        $collText.text('已收藏');
+        $colloction.text(collectionNum);
+        localStorage.setItem('collection_num',collectionNum)
+        $collIco.addClass('act_sc_ico_check');
+        collflag = false;
+    }
+//        取消收藏
+    var subcollNum = function(){
+        var collectionNum = parseInt($('.collection_num').text());
+        collectionNum = collectionNum - 1;
+        $collText.text('收藏');
+        $colloction.text(collectionNum);
+        $collIco.removeClass('act_sc_ico_check');
+        localStorage.removeItem('collection_num');
+        collflag = true;
+    }
+</script>
+</body>
+</html>

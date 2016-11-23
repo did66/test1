@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,minimal-ui,initial-scale=1,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="format-detection" content="telephone=no" />
+	<title>可可</title>
+	<!-- 分享平台获取信息 -->
+	<meta itemprop="name" content="半熟人婚恋-最靠谱的婚礼平台">
+	<meta name="description" itemprop="description" content="半熟人婚恋-最靠谱的婚礼平台">
+    <meta itemprop="image" content="logo.jpg">
+    <link href="css/photoswipe.css" type="text/css" rel="stylesheet" />
+    <link href="css/swiper.min.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/dropload.css" />
+    <style>
+        .dialog{ width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 999998; position: fixed; left: 0; top: 0; display: none;}
+        .load_wrap{ position: absolute; width: 10%; top: 50%; left: 50%; transform: translate(-50%,-50%); -webkit-transform: translate(-50%,-50%); z-index: 999999; text-align: center;}
+        .dynamic_user_ico{ overflow: hidden;}
+    </style>
+</head>
+<body>
+    <div class="top">
+        <div class="top_content">
+            <h2 class="title">
+                <a class="goback fl" href="javascript:history.back(-1)">返回</a>
+                <span class="title_dynamic">韩可可</span>
+             </h2>
+        </div>
+    </div>
+    <div class="wrap loadContent">
+        <div class="dynamic_wrap">
+            <div class="dynamic_bg">
+                <img src="images/big_ico.jpg" alt="" />
+                <div class="dynamic_user_msg">
+                    <p>韩可可</p>
+                    <div class="dynamic_user_ico">
+                        <img src="images/keke.jpg" alt="" />
+                    </div>
+                </div>
+            </div>
+            <ul class="dynamic_list">
+                <li>
+                    <div class="dynamic_content">
+                        <div class="take_photo">
+                            <img src="images/take_photo.jpg" alt="" />
+                            <input class="take_photo_file" id="file_input" type="file" accept="image/*;capture=camera" capture="camera"  />
+                        </div>
+                    </div>
+                    <div class="dynamic_date">
+                        <span class="dynamic_date_text">今天</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="dynamic_content">
+                        <div class="states_msg_wrap">
+                            <div class="states_msg_img">
+                                <img src="images/states_img_01.jpg" alt="" />
+                                <img src="images/states_img_01.jpg" alt="" />
+                                <img src="images/states_img_01.jpg" alt="" />
+                            </div>
+                            <div class="img_total">共<em>3</em>张</div>
+                            <div class="states_msg">又能把你怎样</div>
+                        </div>
+                    </div>
+                    <div class="dynamic_date">
+                        <span class="dynamic_date_text">昨天</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="dynamic_content">
+                        <div class="states_msg_wrap">
+                            <div class="states_msg_img">
+                                <img src="images/states_img_03.jpg" alt="" />
+
+                            </div>
+                            <div class="img_total">共<em>3</em>张</div>
+                            <div class="states_msg">又能把你怎样</div>
+                        </div>
+                    </div>
+                    <div class="dynamic_date">
+                        <span class="dynamic_date_text">昨天</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="dynamic_content">
+                        <div class="states_msg_wrap">
+                            <div class="states_msg_img">
+                                <img src="images/states_img_03.jpg" alt="" />
+
+                            </div>
+                            <div class="img_total">共<em>3</em>张</div>
+                            <div class="states_msg">又能把你怎样</div>
+                        </div>
+                    </div>
+                    <div class="dynamic_date">
+                        <span class="dynamic_date_text">昨天</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="dynamic_content">
+                        <div class="states_msg_wrap">
+                            <div class="states_msg_img">
+                                <img src="images/states_img_03.jpg" alt="" />
+
+                            </div>
+                            <div class="img_total">共<em>3</em>张</div>
+                            <div class="states_msg">又能把你怎样</div>
+                        </div>
+                    </div>
+                    <div class="dynamic_date">
+                        <span class="dynamic_date_text">昨天</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="dynamic_content">
+                        <div class="states_msg_wrap">
+                            <div class="states_msg_img">
+                                <img src="images/states_img_03.jpg" alt="" />
+
+                            </div>
+                            <div class="img_total">共<em>3</em>张</div>
+                            <div class="states_msg">又能把你怎样</div>
+                        </div>
+                    </div>
+                    <div class="dynamic_date">
+                        <span class="dynamic_date_text">昨天</span>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="dynamic_content">
+                        <div class="states_msg dynamic_noImg_bg">童年的裸奔是那样的豪迈、以致于我天真就是两个人光着屁股结婚。</div>
+                    </div>
+                    <div class="dynamic_date">
+                        <span class="dynamic_date_text">09<em>8月</em></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="dynamic_content">
+                        <div class="states_msg_wrap">
+                            <div class="states_msg_img">
+                                <img src="images/test1.jpg" alt="" />
+                                <img src="images/test2.jpg" alt="" />
+                                <img src="images/big_img.jpg" alt="" />
+                                <img src="images/big_img.jpg" alt="" />
+                                <img src="images/states_img_03.jpg" alt="" />
+                                <img src="images/states_img_03.jpg" alt="" />
+                            </div>
+                            <div class="img_total">共<em>6</em>张</div>
+                            <div class="states_msg">
+                                静心，静语。轻轻闭上眼睛，用耳去捕捉交织在身旁的声波，用心去细细勾勒身边的世界，这就是倾听的感觉。倾听——静心的乐曲
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dynamic_date">
+                        <span class="dynamic_date_text">06<em>8月</em></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <!--增加loading层开始-->
+    <div class="dialog">
+        <div class="load_wrap">
+                <img src="images/load.gif" alt="" />
+          </div>
+    </div>
+    <!--增加loading层结束-->
+<script src="js/autosize.js"></script>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/dropload.js"></script>
+<script>
+
+//    根据图片个数改变图片宽度
+        $(function(){
+       $('.states_msg_wrap .states_msg_img').each(function(index,element){
+                var $img  = $('.states_msg_img').eq(index).find('img')
+                var lenght = $img.length;
+               if(lenght==1){
+                   $img.css('width','87%');
+               }
+             });
+        });
+        var input = document.getElementById("file_input");
+        //这边是判断本终端设备是否支持这个API。
+        if(typeof FileReader==='undefined'){
+            show_alert("抱歉，你的设备不支持 FileReader");
+            input.setAttribute('disabled','disabled');
+        }else{
+            input.addEventListener('change',readFile,false); //如果支持就监听改变事件，一旦改变了就运行readFile函数。
+        }
+
+        function readFile(){
+            var file = this.files[0]; //获取file对象
+            var reader = new FileReader(); //声明一个FileReader实例
+            reader.readAsDataURL(file); //调用readAsDataURL方法来读取选中的图像文件
+            //最后在onload事件中，获取到成功读取的文件内容，并以插入一个img节点的方式显示选中的图片
+            reader.onload = function(e){
+                console.log(this.result)//要传递的图片
+                    }
+        }
+</script>
+<!--下拉刷新-->
+<script>
+    var counter = 0;
+    // 每页展示10个
+    var num = 10;
+    var pageStart = 0,pageEnd = 0;
+    $('.loadContent').dropload({
+        scrollArea : window,
+
+        loadUpFn : function(me){
+//            涛哥可以直接修改这里的ajax即可
+//            $.ajax({
+//                type: 'GET',
+//                url: './json/update.json',
+//                dataType: 'json',
+//                success: function(data){
+//                    var result = '';
+//                    for(var i = 0; i < data.lists.length; i++){
+//                        result +=   '<a class="item opacity" href="'+data.lists[i].link+'">'
+//                        +'<img src="'+data.lists[i].pic+'" alt="">'
+//                        +'<h3>'+data.lists[i].title+'</h3>'
+//                        +'<span class="date">'+data.lists[i].date+'</span>'
+//                        +'</a>';
+//                    }
+//                    // 为了测试，延迟1秒加载
+//                    setTimeout(function(){
+//                        $('.lists').html(result);
+//                        // 每次数据加载完，必须重置
+//                        me.resetload();
+//                    },1000);
+//                },
+//                error: function(xhr, type){
+//                    alert('Ajax error!');
+//                    // 即使加载出错，也得重置
+//                    me.resetload();
+//                }
+//            });
+//            以下代码是测试效果使用
+            console.log('下拉刷新数据');
+            setTimeout(function(){
+                me.resetload();
+            },1000)
+        },
+        loadDownFn : function(me){
+//            $.ajax({
+//                type: 'GET',
+//                url: './json/more.json',
+//                dataType: 'json',
+//                success: function(data){
+//                    var result = '';
+//                    counter++;
+//                    pageEnd = num * counter;
+//                    pageStart = pageEnd - num;
+//
+//                    for(var i = pageStart; i < pageEnd; i++){
+//                        result +=   '<a class="item opacity" href="'+data.lists[i].link+'">'
+//                        +'<img src="'+data.lists[i].pic+'" alt="">'
+//                        +'<h3>'+data.lists[i].title+'</h3>'
+//                        +'<span class="date">'+data.lists[i].date+'</span>'
+//                        +'</a>';
+//                        if((i + 1) >= data.lists.length){
+//                            // 锁定
+//                            me.lock();
+//                            // 无数据
+//                            me.noData();
+//                            break;
+//                        }
+//                    }
+//                    // 为了测试，延迟1秒加载
+//                    setTimeout(function(){
+//                        $('.lists').append(result);
+//                        // 每次数据加载完，必须重置
+//                        me.resetload();
+//                    },1000);
+//                },
+//                error: function(xhr, type){
+//                    alert('Ajax error!');
+//                    // 即使加载出错，也得重置
+//                    me.resetload();
+//                }
+//            });
+            //            以下代码是测试效果使用
+            console.log('上拉加载数据');
+           setTimeout(function(){
+               me.resetload();
+           },1000)
+        },
+        threshold : 50
+    });
+</script>
+
+</body>
+</html>
