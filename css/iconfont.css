@@ -1,0 +1,185 @@
+/* 本网站代码与设计，版权规幻视所有。盗用者后果自负,部分代码来源于网上，ICON来源于IconFont   2016-11-14 霍前勇*/
+@font-face {font-family: "iconfont";
+  src: url('../svg/iconfont.eot'); /* IE9*/
+  src: url('../svg/iconfont.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../svg/iconfont.woff') format('woff'), /* chrome, firefox */
+  url('../svg/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../ttf/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-xinlang:before { content: "\3436"; }
+
+.icon-lianjie:before { content: "\e605"; }
+
+.icon-QQ:before { content: "\e607"; }
+
+.icon-xiazai:before { content: "\e62a"; }
+
+.icon-ttpodicon:before { content: "\e61f"; }
+
+.icon-gengduo:before { content: "\e60e"; }
+
+.icon-sousuo:before { content: "\e617"; }
+
+.icon-guanbi:before { content: "\e61a"; }
+
+.icon-94:before { content: "\e67e"; }
+
+.icon-close:before { content: "\e641"; }
+
+.icon-xiazai1:before { content: "\e60a"; }
+
+.icon-chenggong:before { content: "\e640"; }
+
+.icon-paixu:before { content: "\e67f"; }
+
+.icon-suo:before { content: "\e611"; }
+
+.icon-download:before { content: "\e600"; }
+
+.icon-yonghu:before { content: "\e6f4"; }
+
+.icon-11:before { content: "\e60b"; }
+
+.icon-playstation:before { content: "\e859"; }
+
+.icon-Prompt:before { content: "\e612"; }
+
+.icon-x-mpg:before { content: "\e68c"; }
+
+.icon-diannaotaishimac01:before { content: "\e614"; }
+
+.icon-zixun:before { content: "\e60d"; }
+
+.icon-iconset0290:before { content: "\e6bd"; }
+
+.icon-fanhui:before { content: "\e642"; }
+
+.icon-paixu1:before { content: "\e6cd"; }
+
+.icon-tuichu:before { content: "\e68e"; }
+
+.icon-8shipinicon:before { content: "\e627"; }
+
+.icon-celve:before { content: "\e6a9"; }
+
+.icon-youxiang:before { content: "\e61c"; }
+
+.icon-yanjing:before { content: "\e667"; }
+
+.icon-shouyeshouye:before { content: "\e6ee"; }
+
+.icon-asmkticon0142:before { content: "\e7bf"; }
+
+.icon-shipin:before { content: "\e610"; }
+
+.icon-shoucang:before { content: "\e673"; }
+
+.icon-anzhuo:before { content: "\e628"; }
+
+.icon-meiyougengduole:before { content: "\e62c"; }
+
+.icon-zuixinyouxuan:before { content: "\e698"; }
+
+.icon-vr:before { content: "\e623"; }
+
+.icon-3cshuma:before { content: "\e6e8"; }
+
+.icon-icon:before { content: "\e602"; }
+
+.icon-shipin1:before { content: "\e884"; }
+
+.icon-yaochi:before { content: "\e636"; }
+
+.icon-pingguo:before { content: "\e79e"; }
+
+.icon-shalou:before { content: "\e625"; }
+
+.icon-shoucangyishoucang:before { content: "\e501"; }
+/* ========================= 隔离线 ========================= */
+/* 收藏 */
+.hshi-I-shoucang{width:20px; height: 20px;fill: #ccc;vertical-align:-5px;}
+/* 排序 */
+.hshi-I-paixu{width:15px;height:15px;vertical-align:-3px;fill:#333;}
+/* 新浪、QQ */
+.hshi-I-qq,.hshi-I-xina{width:23px;height:23px;vertical-align:-6px;fill:#fff;}
+/* 下载 */
+.hshi-I-down,.hshi-I-android,.hshi-I-pingguo,.hshi-I-anzhuo,.hshi-I-playstation{width:18px;height:18px;vertical-align:-4px;fill:#666;margin-right:0px;}
+/* 下载圆 */
+.hshi-I-Vdownload{width:50px;height:50px;fill:#fff;}
+/* 搜索 */
+.hshi-I-search{width:21px;height:21px;}
+/* 成功 */
+.hshi-I-chenggong{width:31px;height:31px;vertical-align:-12px;fill:#2db553;}
+/* 攻略 */
+.hshi-I-celve,.hshi-I-news,.hshi-I-zxzx,.hshi-I-lianjie{width:27px;height:27px;vertical-align:-7px;fill:#5dcb19;}
+/* 安卓 */
+.hshi-I-android,.hshi-I-anzhuo{fill:#40D66E;}
+/* Window */
+.swiper-pagination-bullet .hshi-I-win,.swiper-pagination-bullet .hshi-I-playstation{width:20px;height:20px;vertical-align:-4px;fill: #333333;margin-right:5px;-webkit-transform:rotate(-90deg);transform:rotate(-90deg);}
+.swiper-pagination-bullet-active .hshi-I-win,.swiper-pagination-bullet-active .hshi-I-playstation{width:20px;height:20px;vertical-align:-4px;fill: #fff;}
+.hshi-I-win{width:15px;height:15px;vertical-align:-2px;fill:#1692EA;margin-right:0px;}
+/* 索尼playstation */
+.hshi-I-playstation{fill:#ffcc58;}
+/* 苹果 */
+.hshi-I-pingguo{fill:#333;}
+/* more */
+.hshi-I-more02{width:20px;height:20px;vertical-align:-5px;fill:#868686;}
+/* more圆 */
+.hshi-I-more{width:20px;height:20px;fill:#868686;}
+.hshi-I-more:hover,.hshi-I-more:active,.hshi-news-more-a:hover{fill:#388cf3;-webkit-transform:rotate(270deg);transform:rotate(270deg);}
+/* 回到顶部 */
+.hshi-I-gotop{width:28px;height:28px;fill:#5e5e5e;}
+/* 链接 */
+.hshi-I-lianjie{fill:#ff5a00;}
+/* 最新 */
+.hshi-I-news{fill: #00f0ed;}
+
+/* 沙漏 */
+.hshi-I-shalou{width:21px;height:21px;vertical-align:-4px;fill:#e98503;}
+/* 视频播放 */
+
+/* 视频圆 */
+.hshi-I-shipin1{width:27px;height:27px;vertical-align:-7px;fill:#0ad68b;}
+/* 视频下载 */
+
+/* 退出 */
+.hshi-I-out{width:15px;height:15px;vertical-align:-3px;fill:#fff;}
+/* 锁 */
+
+/* 用户、密码、邮箱 */
+.hshi-I-user,.hshi-I-password,.hshi-I-youxiang,.hshi-I-3cshuma{width:20px;height:20px;fill:#bbbbbb;float:left;top:9px;left:10px;position:absolute;}
+.hshi-I-password{width:25px;height:25px;top:7px;left:8px;}
+/* 钥匙 */
+
+/* 游戏 */
+.hshi-I-game{width:38px;height:38px;vertical-align:-12px;fill:#0096ff;}
+/* VR游戏 */
+
+/* VR行业 */
+
+/* 资讯 */
+.hshi-I-zxzx{fill:#ff6b6b;vertical-align:-6px;}
+/* 路径home */
+
+/* 返回 */
+.hshi-I-fanhui{width:15px;height:15px;vertical-align:-2px;fill:#464646;margin-left:5px;}
+/* 排序 */
+
+/* 关闭 */
+.hshi-I-close{width:21px;height:21px;fill:#333;display:block;margin:0 auto;}
+/* 路径 */
+.hshi-I-path{width:23px;height:23px;vertical-align:-5px;fill:#464646;}
+/* 没有更多内容 */
+.hshi-I-nomore{width:40px;height:40px;vertical-align:-14px;fill:#ccc;margin-right:6px;}
+
+
+.excessive,.excessive:hover,.excessive:active,.hshi-I-more,.hshi-I-more:hover,.hshi-I-more:active,.hshi-I-more02:active,.hshi-news-more-a,.hshi-news-more-a:hover{transition:all 0.3s;-webkit-transition:all 0.3s;}
