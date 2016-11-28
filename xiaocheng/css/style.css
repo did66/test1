@@ -1,0 +1,49 @@
+.wraper{ width: 100%; max-width: 1000px; margin:0 auto; }
+.main{width: 100%; position: relative; font-size: 0;}
+.marquee{ position: absolute; width: 88%; left: 6%; bottom: 8%; }
+.marquee img{ width: auto; height: 50%; }
+.tips{ position: fixed; right: 3%; bottom: 5%; width: 62px; z-index: 9999;}
+.tips a{ display: block; width: 62px; height: 62px;  text-align: center; font-size: 16px; color: #ffffff; background: red; border: 1px #fff solid;  cursor: pointer;}
+.message{ line-height: 62px; }
+.tips .totop{ height: 57px; padding-top: 5px;  display: none;}
+.visit_wrap{ width: 87.7%; margin: 0 auto; border-left:13px #f50000 solid;  border-right:13px #f50000 solid;  padding-bottom: 40px;  }
+.free_call_wrap{width: 306px; border: 1px #d8d8d8 solid; margin-left: 20px;}
+.user_msg_wraper{width: 450px; color: #000000; font-size: 16px; margin-right: 28px;}
+.bottom_img{ display: block; width: 87.7%; margin: 0 auto; margin-top: -6px;}
+.bottom_bg{ width: 87.7%; background: #f50000; height:90px; margin: 0 auto; margin-bottom: 40px; }
+.text_call{ color: #ff6815; text-align: center; margin-bottom: 15px; margin-top: 8px; font-size: 20px;}
+.call_nopay{ width: 90%; margin: 0 auto;border: 1px #189e2d solid;}
+
+.input_tel{ font-size: 16px; color: #a99ca6; height: 53px; line-height: 53px; text-indent: 8px; width: 100%;}
+.call_bg{  height: 66px; background-size: 100% 66px; font-size: 14px; color: #FFFFFF; background: url("../images/call_bg.jpg") no-repeat;}
+.call_bg p{ padding-left: 82px;}
+.call_bg_p01{ padding-top: 12px; font-size: 20px; font-weight: bold; }
+.call_bg_p02{ font-size: 14px;color: #6adb71; }
+.color_01{ color: #d3d808;}
+.call_tips{ margin-top: 13px;}
+
+.user_msg_wraper li{ position: relative; margin-bottom: 10px;}
+.user_msg_wraper i{ color: #fe483a; position: absolute; left: -15px; top: 10px;}
+.user_msg_wraper input[type=text],.select_tz{ width: 356px; height: 32px; line-height: 32px; border:1px #d0d0d0 solid; text-indent: 5px;  color: #a99ca6;}
+.radio{ margin-right: 24px;}
+.blank_text{ padding: 0 1em;}
+.textarea_visit{ width: 356px; height: 122px;border:1px #d0d0d0 solid; resize: none; max-width: 356px; max-height: 122px; text-indent: 5px; margin-left: 84px;}
+.go_msg{ display: block; width: 356px; color: #FFFFFF; font-weight: bold; text-align: center; line-height: 44px; height: 44px; background: #ff3300; margin-top: 20px; margin-left: 84px; border-radius: 3px;}
+.label_tips{ position: absolute; left: 0; top: 8px;}
+@media screen and (max-width:639px){
+    .tips a{ display: block; width: 50px; height: 50px;  text-align: center; font-size: 14px; color: #ffffff; background: red; border: 1px #fff solid;  cursor: pointer;}
+    .message{ line-height: 50px; }
+    .tips .totop{ height: 50px; padding-top: 5px;  display: none;}
+    .marquee img{ width: 1500px; height: 50%; }
+    .visit_wrap{ width: 87.7%; margin: 0 auto; border-left:0.161rem #f50000 solid;  border-right:0.161rem #f50000 solid;  padding-bottom: 0.321rem;  }
+    .user_msg_wraper{width:90%; color: #000000; font-size: 0.250rem; margin-left: 7%; margin-right: 0; float: left;}
+    .user_msg_wraper li{ position: relative; margin-bottom: 0.15rem;}
+    .user_msg_wraper i{ color: #fe483a; position: absolute; left: -0.15rem; top: 0.15rem;}
+    .user_msg_wraper input[type=text],.select_tz{ width: 70%; height: 0.45rem; line-height: 0.45rem; border:1px #d0d0d0 solid; text-indent: 2px;  color: #a99ca6;}
+    .radio{ margin-right: 0px; font-size: 0.18rem;}
+    .blank_text{ padding: 0 1em;}
+    .textarea_visit{ width: 70%; height:1.071rem;border:1px #d0d0d0 solid; resize: none; max-width: 70%; max-height: 1.071rem text-indent: 5px; margin-left:1.32rem;}
+    .go_msg{ display: block; width: 70%; color: #FFFFFF; font-weight: bold; text-align: center; height: 0.446rem; line-height: 0.446rem; background: #ff3300; margin-top: -0.101rem;  margin-left:1.32rem; border-radius: 3px;}
+    .label_tips{ position: absolute; left: 0; top:  0.125rem;}
+    .bottom_bg{ width: 87.7%; background: #f50000; height:0.893rem; margin: 0 auto; margin-bottom:0.357rem; }
+}
